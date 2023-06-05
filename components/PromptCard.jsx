@@ -27,7 +27,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   };
 
   return (
-    <div className='prompt_card'>
+    <div className='prompt_card hover:bg-sky-50 '>
       <div className='flex justify-between items-start gap-5'>
         <div
           className='flex-1 flex justify-start items-center gap-3 cursor-pointer'
@@ -68,7 +68,6 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
       <p className='break-words my-4 font-satoshi text-sm text-gray-700'>{post.prompt}</p>
       <p
         className='font-inter text-sm blue_gradient cursor-pointer'
-        onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
           {post.tag.split(/\s+/).map((tag, index) => {
           const tagWithoutHash = tag.replace(/#/g, "");
@@ -84,13 +83,13 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
           <p
-            className='font-inter text-sm green_gradient cursor-pointer'
+            className=' rounded-md border border-green-200 px-2 py-1 font-inter text-sm  hover:bg-green-100 cursor-pointer'
             onClick={handleEdit}
           >
             Edit
           </p>
           <p
-            className='font-inter text-sm orange_gradient cursor-pointer'
+            className='rounded-md  border border-red-200 px-2 py-1 font-inter text-sm hover:bg-red-100 cursor-pointer'
             onClick={handleDelete}
           >
             Delete
