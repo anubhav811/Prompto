@@ -65,9 +65,12 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
         </div>
       </div>
 
-      <p className='my-4 font-satoshi text-sm text-gray-700'>{post.prompt}</p>
-      <p>
-        {post.tag.split(/\s+/).map((tag, index) => {
+      <p className='break-words my-4 font-satoshi text-sm text-gray-700'>{post.prompt}</p>
+      <p
+        className='font-inter text-sm blue_gradient cursor-pointer'
+        onClick={() => handleTagClick && handleTagClick(post.tag)}
+      >
+          {post.tag.split(/\s+/).map((tag, index) => {
           const tagWithoutHash = tag.replace(/#/g, "");
           return (
             <span key={index} className='font-inter text-sm blue_gradient cursor-pointer' 
