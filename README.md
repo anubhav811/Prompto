@@ -7,5 +7,5 @@
 
 ![Prompto](https://github.com/anubhav811/Prompto/blob/main/readme.png)
 
-Check out at https://bit.ly/prompto-ai
+Check out at [https://bit.ly/prompto-ai](https://prompto-ai.vercel.app/)
 
